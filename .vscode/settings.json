@@ -1,0 +1,10 @@
+{
+    "eslint.enable": true,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"editor.tabSize": 3,
+	"files.eol": "\n",
+	"eslint.autoFixOnSave": true,
+	"javascript.validate.enable": false,
+	"flow.enabled": false
+}

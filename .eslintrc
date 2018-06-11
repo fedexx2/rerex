@@ -32,22 +32,12 @@
 				"SwitchCase": 1
 			}
 		],
-		"react/jsx-indent": [
-			"error",
-			"tab"
-		],
-		"react/jsx-indent-props": [
-			"error",
-			"tab"
-		],
 		"comma-dangle": [
 			"error",
 			"always-multiline"
 		],
-		"jsx-a11y/click-events-have-key-events": "off",
-		"jsx-a11y/no-static-element-interactions": "off",
-		"react/jsx-no-bind": "off",
 		"object-curly-newline": "off",
-		"no-nested-ternary": "off"
+		"no-nested-ternary": "off",
+		"prefer-rest-params": "off"
 	}
 }
