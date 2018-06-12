@@ -8,7 +8,7 @@
   },
   "author": "Fedexx2 <fedexx2@gmail.com>",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "@babel/cli": "^7.0.0-beta.47",
     "@babel/core": "^7.0.0-beta.47",
     "@babel/plugin-proposal-class-properties": "^7.0.0-beta.47",
