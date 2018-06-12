@@ -2,14 +2,17 @@
   "name": "rerex",
   "version": "0.5.2",
   "description": "",
-  "main": "dist/main.js",
+  "main": "dist/index.js",
   "scripts": {
-	"build": "babel -d dist/ src/",	
-	"postinstall": "babel -d dist/ src/",	
-	"test": "jest"
+    "build": "babel -d dist/ src/",
+    "postinstall": "babel -d dist/ src/",
+    "test": "jest"
   },
   "author": "Fedexx2 <fedexx2@gmail.com>",
   "license": "ISC",
+  "dependencies": {
+    
+  },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.47",
     "@babel/core": "^7.0.0-beta.47",
