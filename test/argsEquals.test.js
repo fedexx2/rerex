@@ -1,4 +1,4 @@
-import argsEquals from './../src/argsEqualsShallow';
+import { argsEquals } from './../src';
 
 
 describe('TEST FUNC argsEquals', () => {

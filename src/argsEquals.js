@@ -1,4 +1,4 @@
-export default function argsEqualsShallow(prev, next) {
+export default function argsEquals(prev, next) {
 	if (prev === null || next === null || prev.length !== next.length) {
 		return false;
 	}

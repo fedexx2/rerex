@@ -1,4 +1,4 @@
-import argsEquals from './argsEqualsShallow';
+import argsEquals from './argsEquals';
 
 function memo1(func) {
 	let lastArgs = null;

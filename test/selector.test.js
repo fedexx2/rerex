@@ -1,4 +1,4 @@
-import selector from './../src/selector';
+import { selector } from './../src';
 
 
 describe('TEST Simple Selector', () => {

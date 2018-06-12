@@ -1,4 +1,4 @@
-import memo from './../src/memo';
+import { memo } from './../src';
 
 describe('TEST FUNC memo1', () => {
 	const mock = jest.fn();

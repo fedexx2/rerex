@@ -1,5 +1,4 @@
-import rerex from './../src/rerex';
-import selector from './../src/selector';
+import rerex, { selector } from './../src';
 
 describe('TEST Rerex', () => {
 	const selXX = selector(
