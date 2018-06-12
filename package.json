@@ -1,6 +1,6 @@
 {
   "name": "rerex",
-  "version": "0.0.1",
+  "version": "0.5.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.47",
     "@babel/plugin-proposal-optional-chaining": "^7.0.0-beta.47",
     "@babel/preset-env": "^7.0.0-beta.47",
+    "@babel/preset-flow": "^7.0.0-beta.49",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^8.2.3",
     "babel-loader": "^8.0.0-beta.3",
