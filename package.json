@@ -2,7 +2,7 @@
   "name": "rerex",
   "version": "0.5.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "jest"
   },

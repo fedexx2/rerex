@@ -15,9 +15,7 @@ const s2pO = (state, props) => ({
 });
 
 
-const s2p3 = (state, props) => rerex({
-	// map ?
-});
+
 
 
 const selXyz = selector(
@@ -28,3 +26,14 @@ const selXyz = selector(
 	(x, y) => dowork(x, y),
 	(x, y) => x,
 );
+
+
+
+const multiSel = selector(
+	(state, props) => [
+		state.a,
+		props.b,
+		selXyz
+	]
+	(a,b,sel) => dowork(a,b,sel),
+)
