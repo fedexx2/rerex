@@ -2,9 +2,12 @@
   "name": "rerex",
   "version": "0.5.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "dist/main.js",
   "scripts": {
-    "test": "jest"
+	"build:prod": "webpack -p",	
+	"build:dev": "webpack -d",
+	"test": "jest"
+	 
   },
   "author": "Fedexx2 <fedexx2@gmail.com>",
   "license": "ISC",
