@@ -9,7 +9,7 @@ export default function selector(input, compute, key) {
 	function selectorRunner(state, props) {
 		let inArgs = input.call(this, state, props);
 		inArgs = inArgs.map(i => (typeof i === 'function' ? i(state, props) : i));
-		return memofunc(...inArgs);
+		return memofunc.apply({}, inArgs);
 	}
 	selectorRunner.getInfo = () => memofunc.getInfo();
 	selectorRunner.getCache = () => memofunc.getCache();
