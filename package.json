@@ -7,6 +7,7 @@
     "build": "babel src --out-dir es",
 	 "clean": "rimraf dist",
 	 "prepare": "npm run clean && npm run build",
+	 "install": "npm run clean && npm run build",
     "test": "jest"
   },
   "author": "Fedexx2 <fedexx2@gmail.com>",
