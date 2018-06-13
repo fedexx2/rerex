@@ -186,4 +186,38 @@ describe('TEST Trivial Selector', () => {
 	test('Simple Func', () => {
 		expect(1).toBe(1);
 	});
+
+	describe('TEST Selector as Input', () => {
+		const seli = selector(
+			(state, props) => [state.x, props.y],
+			(x, y) => x - y,
+		);
+
+		const selo = selector(
+			(state, props) => [state.z, props.w, seli],
+			(z, w, i) => [z + i, w + i],
+		);
+
+		test('Compute 1', () => {
+			const state = { x: 10, z: 2 };
+			const props = { y: 7, w: 100 };
+
+			const i = seli(state, props);
+			expect(i).toBe(3);
+			expect(seli.getInfo()).toEqual({ calc: 1, hits: 0 });
+
+			const v = selo(state, props);
+			expect(v).toEqual([5, 103]);
+
+			expect(seli.getInfo()).toEqual({ calc: 1, hits: 1 });
+			expect(selo.getInfo()).toEqual({ calc: 1, hits: 0 });
+		});
+
+		test('Recompute', () => {
+			const v = selo({ x: 10, z: 2 }, { y: 7, w: 100 });
+			expect(v).toEqual([5, 103]);
+			expect(seli.getInfo()).toEqual({ calc: 1, hits: 2 });
+			expect(selo.getInfo()).toEqual({ calc: 1, hits: 1 });
+		});
+	});
 });

@@ -9,17 +9,14 @@
 		"react": {
 			"pragma": "React",
 			"version": "16.3"
-		},
-		"import/resolver": "webpack"
+		}
 	},
 	"extends": [
-		"airbnb",
-		"plugin:flowtype/recommended"
+		"airbnb"
 	],
 	"plugins": [
-		"flowtype",
 		"jest"
-	 ],
+	],
 	"rules": {
 		"max-len": "off",
 		"no-tabs": "off",

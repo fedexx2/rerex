@@ -1,18 +1,17 @@
 {
   "name": "rerex",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "",
-  "main": "dist/index.js",
+  "module": "es/index.js",
   "scripts": {
-    "build": "babel -d dist/ src/",
-    "postinstall": "babel -d dist/ src/",
+    "build": "babel src --out-dir es",
+	 "clean": "rimraf dist",
+	 "prepare": "npm run clean && npm run build",
     "test": "jest"
   },
   "author": "Fedexx2 <fedexx2@gmail.com>",
-  "license": "ISC",
-  "dependencies": {
-    
-  },
+  "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.47",
     "@babel/core": "^7.0.0-beta.47",
@@ -25,7 +24,6 @@
     "@babel/preset-flow": "^7.0.0-beta.49",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^8.2.3",
-    "babel-loader": "^8.0.0-beta.3",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-import-resolver-webpack": "^0.10.0",
@@ -35,10 +33,8 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.9.1",
     "jest": "^23.1.0",
-    "path": "^0.12.7",
-    "webpack": "^4.12.0",
-    "webpack-bundle-analyzer": "^2.13.1",
-    "webpack-cli": "^2.1.5",
-    "webpack-dev-server": "^3.1.4"
+    "rimraf": "^2.6.2",
+    "rollup": "^0.60.4",
+    "rollup-plugin-babel": "^3.0.4"
   }
 }
