@@ -1,12 +1,12 @@
 
-export default function rerex(map) {
+export default function rerex(init) {
 	return function rerexRunner(state, props) {
-		const ret = (typeof map === 'function') ? map(state, props) : map;
-
-		for (const key in ret) {
-			if (typeof ret[key] === 'function') {
-				ret[key] = ret[key](state, props);
-			}
+		const map = (typeof init === 'function') ? init(state, props) : init;
+		const ret = {};
+		for (const key in map) {
+			ret[key] = (typeof map[key] === 'function')
+				? map[key](state, props)
+				: map[key];
 		}
 		return ret;
 	};
