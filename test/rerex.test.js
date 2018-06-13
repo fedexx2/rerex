@@ -31,20 +31,11 @@ describe('TEST Rerex', () => {
 		expect(map).toEqual({ xx: 25, xwy: 30 });
 		expect(selXX.getInfo()).toEqual({ calc: 1, hits: 0 });
 		expect(selXWY.getInfo()).toEqual({ 3: { calc: 1, hits: 0 } });
-	});
 
 
-	test('Only Selectors Map 2', () => {
-		const s2p = rerex({
-			xx: selXX,
-			xwy: selXWY,
-		});
+		const map2 = s2p(state2, props2);
 
-		expect(typeof s2p).toBe('function');
-
-		const map = s2p(state2, props2);
-
-		expect(map).toEqual({ xx: 100, xwy: 6000 });
+		expect(map2).toEqual({ xx: 100, xwy: 6000 });
 		expect(selXX.getInfo()).toEqual({ calc: 2, hits: 0 });
 		expect(selXWY.getInfo()).toEqual({ 3: { calc: 1, hits: 0 }, 20: { calc: 1, hits: 0 } });
 	});
