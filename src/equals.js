@@ -13,10 +13,12 @@ export function argsEquals(prev, next) {
 
 export function shallowEquals(prev, next) {
 	if (prev === next) return true;
+
 	const tprev = typeof prev;
 	const tnext = typeof next;
 
 	if (tprev !== tnext) return false;
+	if (prev === null || next === null) return false;
 	if (tprev !== 'object') return false;
 	if (Array.isArray(prev) !== Array.isArray(next)) return false;
 

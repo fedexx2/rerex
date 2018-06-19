@@ -1,6 +1,6 @@
 {
   "name": "rerex",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "description": "",
   "module": "es/index.js",
   "scripts": {
