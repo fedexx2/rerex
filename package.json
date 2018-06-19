@@ -5,7 +5,7 @@
   "module": "es/index.js",
   "scripts": {
     "build": "babel src --out-dir es",
-	 "clean": "rimraf dist",
+	 "clean": "rimraf es",
 	 "prepare": "npm run clean && npm run build",
 	 "install": "npm run clean && npm run build",
     "test": "jest"

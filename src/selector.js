@@ -1,6 +1,5 @@
 import memo from './memo';
 
-
 export default function selector(input, compute, key) {
 	if (!compute && !key) return input;
 

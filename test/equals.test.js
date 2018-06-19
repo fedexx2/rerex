@@ -1,4 +1,4 @@
-import { argsEquals } from './../src';
+import { argsEquals, shallowEquals } from './../src';
 
 
 describe('TEST FUNC argsEquals', () => {
@@ -77,3 +77,49 @@ describe('TEST FUNC argsEquals', () => {
 	});
 });
 
+describe('TEST shallowEquals', () => {
+	test('1 2', () => {
+		const res = shallowEquals(1, 2);
+		expect(res).toBe(false);
+	});
+
+	test('4 4', () => {
+		const res = shallowEquals(4, 4);
+		expect(res).toBe(true);
+	});
+
+	test('test tost', () => {
+		const res = shallowEquals('test', 'tost');
+		expect(res).toBe(false);
+	});
+
+	test('test test', () => {
+		const res = shallowEquals('test', 'test');
+		expect(res).toBe(true);
+	});
+
+	test('test 7', () => {
+		const res = shallowEquals('test', 7);
+		expect(res).toBe(false);
+	});
+
+	test('[1] [4]', () => {
+		const res = shallowEquals([1], [4]);
+		expect(res).toBe(false);
+	});
+
+	test('[1 2 3] [1 2 3]', () => {
+		const res = shallowEquals([1, 2, 3], [1, 2, 3]);
+		expect(res).toBe(true);
+	});
+
+	test('{0:1 1:2 2:3} [1 2 3]', () => {
+		const res = shallowEquals({ 0: 1, 1: 2, 2: 3 }, [1, 2, 3]);
+		expect(res).toBe(false);
+	});
+
+	test('{0:1 1:2 2:3} {0:1 1:2 2:3}', () => {
+		const res = shallowEquals({ 0: 1, 1: 2, 2: 3 }, { 0: 1, 1: 2, 2: 3 });
+		expect(res).toBe(true);
+	});
+});

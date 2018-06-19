@@ -1,6 +1,5 @@
 import { selector } from './../src';
 
-
 describe('TEST Simple Selector', () => {
 	const sel = selector(
 		(state, props) => [state.x, props.y],
